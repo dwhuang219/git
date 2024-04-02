@@ -15,13 +15,13 @@ def task_1():
 
 
 @task
-def task_2():
+def task_2(input):
     time.sleep(5)
     print("task2 finished")
 
 
 @task
-def task_3():
+def task_3(input):
     print("task3 finished")
 
 
@@ -36,7 +36,7 @@ def test_dag():
 if __name__ == "__main__":
     test_dag.from_source(
         source="https://github.com/dwhuang219/git.git", 
-        entrypoint="test.py:get_repo_info"
+        entrypoint="test2.py:test_dag"
     ).deploy(
         name="my-second-deployment", 
         work_pool_name="my-managed-pool"
