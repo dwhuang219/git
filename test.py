@@ -13,6 +13,7 @@ def get_repo_info(repo_name: str = "PrefectHQ/prefect"):
     url = f"https://api.github.com/repos/{repo_name}"
     logger = get_run_logger()
     name = get_name()
+    print("changed: version1")
     repo = {"1": 1, "2": 2}
     logger.info("%s repository statistics 🤓:", repo_name)
     logger.info(f"Stars 🌠 : %d", repo["1"])
