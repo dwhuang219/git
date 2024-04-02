@@ -39,7 +39,7 @@ if __name__ == "__main__":
         entrypoint="test2.py:test_dag"
     ).deploy(
         cron="50 15 * * *",
-        timezone="Aisa/Tokyo",
+        # timezone="Aisa/Tokyo",
         name="my-second-deployment", 
         work_pool_name="my-managed-pool"
     )
