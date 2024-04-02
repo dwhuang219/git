@@ -10,13 +10,13 @@ def get_name():
 
 @task
 def task_1():
-    time.sleep(15)
+    time.sleep(2)
     print("task1 finished")
 
 
 @task
 def task_2(input=0):
-    time.sleep(5)
+    time.sleep(1)
     print("task2 finished")
 
 
@@ -30,7 +30,7 @@ def test_dag():
     first_result = task_1.submit()
     second_result = task_2.submit(first_result)
     third_result = task_3.submit()
-    fourth_result = task_2.submit()
+    fourth_result = task_2.submit((second_result, third_result))
 
 
 if __name__ == "__main__":
