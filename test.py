@@ -22,7 +22,7 @@ def get_repo_info(repo_name: str = "PrefectHQ/prefect"):
 
 if __name__ == "__main__":
     get_repo_info.from_source(
-        source="https://github.com/discdiver/demos.git", 
+        source="https://github.com/dwhuang219/git/tree/master", 
         entrypoint="test.py:get_repo_info"
     ).deploy(
         name="my-first-deployment", 
