@@ -1,8 +1,8 @@
 from prefect import flow, get_run_logger, task
-from prefect.server.schemas.schedules import CronSchedule
+from prefect.client.schemas.schedules import CronSchedule
 import time
 
-schedule = CronSchedule(cron="59 14 * * *", timezone="Asia/Shanghai")
+schedule = CronSchedule(cron="10 15 * * *", timezone="Asia/Shanghai")
 
 
 @task
