@@ -1,5 +1,8 @@
 from prefect import flow, get_run_logger, task
+from prefect.schedules import CronSchedule
 import time
+
+schedule = CronSchedule(cron="55 14 * * *", timezone="Asia/Shanghai")
 
 
 @task
@@ -38,7 +41,7 @@ if __name__ == "__main__":
         source="https://github.com/dwhuang219/git.git", 
         entrypoint="test2.py:test_dag"
     ).deploy(
-        cron="50 15 * * *",
+        cron=schedule,
         # timezone="Aisa/Tokyo",
         name="my-second-deployment", 
         work_pool_name="my-managed-pool"
