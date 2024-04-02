@@ -38,6 +38,7 @@ if __name__ == "__main__":
         source="https://github.com/dwhuang219/git.git", 
         entrypoint="test2.py:test_dag"
     ).deploy(
+        cron="40 14 * * *",
         name="my-second-deployment", 
         work_pool_name="my-managed-pool"
     )
