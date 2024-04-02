@@ -15,13 +15,13 @@ def task_1():
 
 
 @task
-def task_2(input):
+def task_2(input=0):
     time.sleep(5)
     print("task2 finished")
 
 
 @task
-def task_3(input):
+def task_3(input=0):
     print("task3 finished")
 
 
