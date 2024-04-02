@@ -34,7 +34,10 @@ def test_dag():
 
 
 if __name__ == "__main__":
-    test_dag.deploy(
+    test_dag.from_source(
+        source="https://github.com/dwhuang219/git.git", 
+        entrypoint="test.py:get_repo_info"
+    ).deploy(
         name="my-second-deployment", 
         work_pool_name="my-managed-pool"
     )
