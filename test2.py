@@ -41,7 +41,7 @@ if __name__ == "__main__":
         source="https://github.com/dwhuang219/git.git", 
         entrypoint="test2.py:test_dag"
     ).deploy(
-        cron=schedule,
+        schedule=schedule,
         # timezone="Aisa/Tokyo",
         name="my-second-deployment", 
         work_pool_name="my-managed-pool"
